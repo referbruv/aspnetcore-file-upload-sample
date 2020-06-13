@@ -1,0 +1,23 @@
+@model ReaderStore.WebApp.Models.ReaderRequestModel
+
+<div class="container-fluid">
+    <div class="row">
+        <form class="form" method="post" asp-controller="Readers" asp-action="Add" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" />
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailAddress"></label>
+                <input asp-for="EmailAddress" type="email" class="form-control" />
+                <span class="text-danger" asp-validation-for="EmailAddress"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Work"></label>
+                <input asp-for="Work" class="form-control-file" />
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
